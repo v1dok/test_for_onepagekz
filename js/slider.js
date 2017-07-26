@@ -15,7 +15,7 @@ stext.addEventListener('click', function(event){
 	var target = event.target;
 	var v = 0;
 	//if stext.childNodes.
-	switch (target.getAttribute('name')) {
+	switch (target.getAttribute('class')) {
 		case 'one' : v = 0;
 		break;
 		case 'two' : v = 25;

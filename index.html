@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+
+<title>Анкета</title>
+</head>
+<body>
+<header>
+<div class="menu-toggle">Меню<span></span></div>
+<ul id="menu">
+<li><a href="#personal">Личная информация</a></li>
+<li><a href="#exp">Опыт</a></li>
+<li><a href="#js">JavaScript</a></li>
+<li><a href="#about">О себе</a></li>
+</ul>
+</header>
+
+<div class="content">
+
+<form id="mainform">
+<h1>Анкета</h1>
+
+<div class="personal" id="personal">
+<div class="icon">
+</div>
+<h2>Личная информация</h2>
+
+<ul id="textbox">
+<li><input id="fio" type="text" name="fio" value="" required><label for="fio">ФИО</label></li>
+<li class="parent_block">
+<span>Год рождения</span>
+<div class="button">Год рождения</div>
+  <div class="toggled_block">
+    <ul>
+    <li>1980</li>
+    <li>1981</li>
+    <li>1982</li>
+    <li>1983</li>
+    <li>1984</li>
+    <li>1985</li>
+    <li>1986</li>
+    <li>1987</li>
+    <li>1988</li>
+    <li>1989</li>
+    <li>1990</li>
+    <li>1991</li>
+    <li>1992</li>
+    <li>1993</li>
+    <li>1994</li>
+    <li>1995</li>
+    <li>1996</li>
+    <li>1997</li>
+    <li>1998</li>
+    <li>1999</li>
+    </ul>
+  </div>
+<input type="hidden" id="born" name="born" value="">
+</li>
+<li><input id="addr" type="text" name="addr" value="" required><label for="addr">Место проживания</label></li>
+<li><input id="skype" type="text" name="skype" value="" required><label for="skype">Skype</label></li>
+<li><input id="email" type="text" name="email" value="" required><label for="email">Email</label></li>
+</ul>
+</div>
+
+<div  id="exp" class="experience">
+<div class="icon">
+</div>
+<h2>Расскажите о своем опыте</h2>
+
+<div class="cb-section">
+<div class="checkbox">
+	<input id="check1" type="checkbox" name="check" value="check1">
+	<label for="check1">БЭМ/OOCS</label>
+</div>
+<div class="checkbox">
+	<input id="check3" type="checkbox" name="check" value="check2">
+	<label for="check3">Webpack</label>
+</div>
+<div class="checkbox">
+	<input id="check2" type="checkbox" name="check" value="check2" checked>
+	<label for="check2">Верстаю семантично</label>
+</div>
+</div>
+
+<div class="cb-section">
+<div class="checkbox">
+	<input id="check4" type="checkbox" name="check" value="check1">
+	<label for="check4">Stylus/LESS/SASS</label>
+</div>
+<div class="checkbox">
+	<input id="check5" type="checkbox" name="check" value="check2">
+	<label for="check5">ES2015/ES2016</label>
+</div>
+<div class="checkbox">
+	<input id="check7" type="checkbox" name="check" value="check1">
+	<label for="check7">Работаю с SVG</label>
+</div>
+</div>
+
+<div class="cb-section">
+<div class="checkbox">
+	<input id="check8" type="checkbox" name="check" value="check2">
+	<label for="check8">Gulp/GRUNT</label>
+</div>
+<div class="checkbox">
+	<input id="check6" type="checkbox" name="check" value="check2" checked>
+	<label for="check6">JQuery</label>
+</div>
+<div class="checkbox">
+	<input id="check9" type="checkbox" name="check" value="check2" checked>
+	<label for="check9">Использую Git</label>
+</div>
+</div>
+
+</div>
+<div class="js"  id="js">
+<div class="icon">
+</div>
+
+<h2>Уровень владения JavaScript</h2>
+
+	<div class="slider-container">
+		<span name="one">Не владею</span><span name="two">Использую готовые решения</span><span name="three">Использую готовые решения и умею их переделывать</span><span name="four">Пишу сложный JS с нуля</span>
+        
+	</div>
+	<div class="slider-box">
+		<span class="slider " tabindex="0">
+			<span class="track">
+				<span class="thumb"></span>
+			</span>
+			<span class="bg"></span>
+		</span>
+	</div>
+<input type="hidden" id="jsclass" name="jsclass" value="">	
+</div>
+
+<div class="about" id="about">
+<div class="icon">
+</div>
+
+<h2>Расскажите о себе</h2>
+<p>Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас.</p>
+
+<textarea name="about" placeholder="Понравилось тем, что ..." wrap="hard" cols="10">
+Я новичок в этом деле, и даже это тестовое задание в какой то степени стало для меня обучением. Не скрою, некоторые вещи брал с просторов интернета. Ваша вакансия привлекла тем, что я хочу работать в этой сфере, и у вас можно работать удаленно. </textarea>
+</div>
+
+<button>Готово</button>
+</form>
+</div>
+<div>
+<script src="js/my.js"></script>
+<script src="js/slider.js"></script>
+</div>
+</body>
+</html>

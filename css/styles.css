@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500');
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+	box-sizing: border-box;
+	transition: .3s ease-in-out;
+	text-align:center;
+}
+ul {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	outline: none;
+}
+img {
+	display: block;
+	width: 100%;
+}
+body {
+	font-size: 14px;
+	line-height: 1;
+	min-width: 500px;
+}
+header {
+	width: 100%;
+	border-bottom: 1px solid #d9d9d9;
+	padding: 30px 0;
+	position: relative;
+	margin: 0 auto;
+}
+.content {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+	font-size: 24px;
+}
+#menu li {
+	display: inline-block;
+	margin-right: 40px;
+}
+#menu a {
+	color: #435993;
+	padding: 10px;
+}
+#menu a:hover {
+	color: #000;
+}
+h1 {
+	font-size: 70px;
+	font-weight: 100;
+	margin: 90px 0 0 0;
+}
+h2 {
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+/* спрайты */
+.icon {
+	background: url(../images/sprite.png) no-repeat;
+	height:47px;
+	width:47px;
+	margin: 20px auto;
+}
+.personal, .experience, .js, .about {
+	padding-top: 40px;
+}
+.personal .icon {
+	background-position: 0 0px;
+}
+.experience .icon {
+	background-position: 0 -47px;
+}
+.js .icon {
+	background-position: 0 -94px;
+}
+.about .icon {
+	background-position: 0 -141px;
+}
+/* текстовые поля */
+#textbox li {
+	position: relative;
+	margin: 25px 0;
+}
+#textbox input {
+	width: 70%;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 60px;
+    outline: none;
+    text-align: center;
+    font-size: 20px;
+}
+#textbox label {
+	position: absolute;
+	font-size: 24px;
+	color: #c8c8c8;
+	bottom: 18px;
+	left: 0;
+	width: 100%
+}
+#textbox input:focus + label, #textbox input:valid + label {
+	top: 7px;
+	font-size: 14px;
+}
+#textbox input:focus {
+	border: 1px solid #435993;
+	padding-top: 15px;
+}
+#textbox input:valid {
+	padding-top: 15px;
+} 
+/* кнопки и textarea */
+button {
+	background: #435993;
+	border: none;
+	height: 45px;
+	width: 100px;
+	color: #fff;
+	border-radius: 8px;
+	font-size: 14px;
+	cursor: pointer;
+	margin: 30px 0;
+}
+textarea {
+	border-radius: 5px;
+	height: 200px;
+	width: 80%;
+	padding: 0.5em;
+	font-weight: 300;
+	font-size: 16px;
+	border: 1px solid #e7e7e7;
+	outline: none;
+	margin-top: 20px;
+}
+textarea:focus {
+	border: 1px solid #435993;
+}
+p {
+	font-size: 16px;
+	font-weight: 300;
+	width: 80%;
+	margin: 0 auto;
+}
+
+/* xtr,jrcs */
+.checkbox {
+	text-align:left;
+	padding: 5px;
+	font-size: 16px;
+}
+.cb-section {
+	display: inline-block;
+	padding-right: 40px;
+}
+.checkbox label {  
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+	width: 200px;
+}
+.checkbox label:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 15px;
+    position: absolute;
+	border-radius: 3px;
+    left: 0;
+    bottom: 1px;
+    background-color: #fff;
+    border: 1px solid #435993;
+}
+.checkbox input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+	display: none;
+}
+.checkbox input[type="checkbox"]:hover  + label:before {	
+	background-color: #e9efff;   
+}
+.checkbox input[type=checkbox]:checked + label:before {
+	background: url(../images/checked.png) no-repeat;
+	background-position: 2px 3px;
+	background-color: #435993;   
+}
+/* выпадающий список */
+.parent_block {
+	width: 40%;
+	margin: 0 auto !important;
+}
+.parent_block ul li {
+	cursor: pointer;
+	background: #fff;
+	margin: 0 !important;
+	padding: 10px 0;
+}
+.parent_block ul li:hover {
+  background: #dfe0e5;
+}
+.button {
+	width: 100%;
+	height: 60px;
+	background: none;
+	border: 1px solid #e5e5e5;
+	border-radius: 5px;
+	margin: 0 auto;
+	cursor: pointer;
+	padding: 16px;
+	color: #c8c8c8;
+}
+.selected {
+	padding: 30px 0 5px 0;
+	font-size: 20px;
+	color: #000;
+}
+.button:after {
+	content:"";
+	background: url(../images/passive.png) no-repeat;
+    width: 14px;
+    height: 9px;
+    position: absolute;
+    right: 20px;
+    top:24px;
+}
+.button.active:after {
+	background: url(../images/active.png) no-repeat;
+}
+.button.active {
+	border: 1px solid #435993;
+}
+.parent_block  .toggled_block {
+	width: 100%;
+	height: 300px;
+	border: none;
+	border-radius: 5px;
+	display: none;
+	overflow-y: scroll;
+	position: absolute;
+	left:30%; 
+	margin-left:-30%;
+	z-index: 2;
+	font-size: 20px;
+	font-weight: 300;
+	color: #435993;
+	-webkit-box-shadow: 0px 3px 4px 3px rgba(196,196,196,0.5);
+	-moz-box-shadow: 0px 3px 4px 3px rgba(196,196,196,0.5);
+	box-shadow: 0px 3px 4px 3px rgba(196,196,196,0.5);   
+}
+.parent_block span {
+	display: block;
+	font-size: 14px;
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 7px;
+	color: #c8c8c8;
+	display: none;
+	cursor: pointer;
+}
+/* вид прокрутки выпадающего списка
+.parent_block  .toggled_block::-webkit-scrollbar{
+    width:12px;
+} */
+/* кнопка переключения меню, появляющаяся при ширине 768px */
+.menu-toggle {
+	position: relative;
+	display: none;
+	padding: 13px;
+	width: 150px;
+	height: 40px;
+	margin: 0 auto;
+	background: #fff;
+	cursor: pointer;
+	border: 1px solid #435993;
+}
+#menu.active {
+max-height: 200px;
+}
+.menu-toggle span {
+	display: block;
+	position: absolute;
+	top:8px;
+	right: 10px;
+    background: url(../images/menu.png) no-repeat;
+    content:"";
+    height: 20px; 
+    width:32px;
+}
+
+/* слайдер */
+.slider-container {
+	font-size: 13px;
+	width: 100%;
+	
+}
+.slider-container span {
+	padding-right: 13px;
+	text-align: left;
+	width: 25%;
+	display: inline-block;
+	padding-bottom: 15px;
+	cursor: pointer;
+	position: relative;
+}
+.slider-container span:last-child {
+	text-align: right;
+	padding-right: 0;
+}
+.slider-container span:after, .slider-container span:before {
+	content: "";
+	position: absolute;
+	z-index: 10;
+}
+
+.slider-container :nth-child(3):before, .slider-container :nth-child(2):before {
+	background: url(../images/c-line.png) no-repeat;
+	height: 24px;
+	width: 2px;
+	left: -1px;
+	bottom: -18px;
+}
+.slider-container :first-child:before {
+	background: url(../images/f-line.png) no-repeat;
+	height: 19px;
+	width: 1px;
+	left: 0;
+	bottom: -12px;
+}
+
+.slider-container :last-child:after {
+	background: url(../images/l-line.png) no-repeat;
+	height: 13px;
+	width: 1px;
+	right: 0;
+	bottom: -5px;
+}
+.slider {
+	display: inline-block;
+	width: 100%;
+	margin-bottom: 30px;
+	height: 20px;
+	position: relative;
+	background: url(../images/gray.png) no-repeat left;
+}
+.slider .track {
+	position: absolute;
+	cursor: pointer;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+	left:0;
+}
+.slider .bg {
+	position: absolute;
+	left: 0;
+	z-index:1;
+	background: url(../images/gradient.png) no-repeat left;
+	height: 100%;
+	top: 0;
+  }
+.slider .thumb {
+	position: absolute;
+	left: 0;
+	background: url(../images/slider-pos.png) no-repeat;
+	height: 32px;
+	width: 29px;
+	top: 15px;
+	margin-left: -14px;
+	z-index: 3;
+}
+/* выравнивания */
+@media screen and (max-width: 850px) {
+.js {
+	width: 90%;
+	margin: 0 auto;
+	}
+}
+@media screen and (max-width: 768px) {
+/* меню при уменьшении экрана */
+.menu-toggle {
+	display: block;
+	}
+header {
+	padding: 10px 0;
+	}
+#menu {
+	max-height: 0;
+	position: absolute;
+	overflow: hidden;
+	background: #fff;
+	top: 62px;
+	right: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	z-index: 3;
+	}
+#menu li {
+	display: block;
+	border-bottom: 1px solid #e5e5e5;
+	margin-right: 0;
+	}	
+#menu a {
+	display: block;
+	padding: 15px 0;
+	}	
+}
+
+/* тут выравнивания */
+@media screen and (max-width: 700px) {
+.cb-section {
+	padding-right:0;
+	}
+}
+@media screen and (max-width: 575px) {
+.cb-section {
+	display: block;
+	margin: 0 auto;
+	padding-left: 35%;
+	}
+.parent_block {
+	width: 70%;
+	}
+}

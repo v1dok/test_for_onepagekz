@@ -1,3 +1,10 @@
+/* этот блок для установки значения по умолчанию, можно убрать */
+var born_date = '1989';
+$('.parent_block span').show();
+$('.parent_block .button').html(born_date);
+$('.button').addClass('selected');
+
+
 $(".parent_block .button").click(function() {
   $('.toggled_block').toggle();
   $('.button').toggleClass('active');

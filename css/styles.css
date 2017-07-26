@@ -150,7 +150,7 @@ p {
 	margin: 0 auto;
 }
 
-/* xtr,jrcs */
+/* чекбоксы */
 .checkbox {
 	text-align:left;
 	padding: 5px;
@@ -204,7 +204,7 @@ p {
 	padding: 10px 0;
 }
 .parent_block ul li:hover {
-  background: #dfe0e5;
+  background: #e9efff;
 }
 .button {
 	width: 100%;
